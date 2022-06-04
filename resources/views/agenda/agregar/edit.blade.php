@@ -12,7 +12,7 @@
                         <i class="fa-solid fa-user-pen"></i>
                       </div>
                       <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
-                        <h2 class="leading-relaxed">Editar Detenido</h2>
+                        <h2 class="leading-relaxed">Editar Persona</h2>
                         <p class="text-sm text-gray-500 font-normal leading-relaxed">Solo se agrega generales del detenido, para agregar agendas ir a
                             <a class="underline decoration-sky-500/30" href="{{route('agenda.index')}}">"Busqueda"</a>.</p>
                       </div>
