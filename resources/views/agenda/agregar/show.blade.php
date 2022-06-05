@@ -3,7 +3,7 @@
         <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
         <div class="mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
             <div class="bg-gray-50 dark:bg-gray-800 w-full xl:w-96 flex justify-between items-center md:items-start px-4 py-6 md:p-6 xl:p-8 flex-col">
-                <h3 class="text-xl dark:text-white font-semibold leading-5 text-gray-800">Detenido</h3>
+                <h3 class="text-xl dark:text-white font-semibold leading-5 text-gray-800">{{ __("PERSON")}}:</h3>
                 <div class="flex flex-col md:flex-row xl:flex-col justify-start items-stretch h-full w-full md:space-x-6 lg:space-x-8 xl:space-x-0">
                     <div class="flex flex-col justify-start items-start flex-shrink-0">
                         <div class="flex justify-center w-full md:justify-start items-center space-x-4 py-8 border-b border-gray-200">

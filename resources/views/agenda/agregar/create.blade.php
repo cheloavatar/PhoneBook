@@ -7,13 +7,13 @@
                 <div class="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
                   <div class="">
                     <div class="flex items-center space-x-5">
-                      <div class="h-14 w-14 bg-blue-200 rounded-full flex flex-shrink-0 justify-center items-center text-blue-500 text-2xl font-mono">
+                      <div class="h-14 w-14 bg-stone-200 rounded-full flex flex-shrink-0 justify-center items-center text-stone-500 text-2xl font-mono">
                           <i class="fa-solid fa-person-circle-plus"></i>
                       </div>
                       <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
-                        <h2 class="leading-relaxed">Agregar Detenido</h2>
-                        <p class="text-sm text-gray-500 font-normal leading-relaxed">Solo se agrega generales del detenido, para agregar agendas ir a
-                            <a class="underline decoration-sky-500/30" href="{{route('agenda.index')}}">"Busqueda"</a>.</p>
+                        <h2 class="leading-relaxed">{{__("ADD PERSON")}}</h2>
+                        <p class="text-sm text-gray-500 font-normal leading-relaxed">Solo se agrega generales de la persona, para agregar agendas ir a
+                            <a class="underline decoration-stone-500/30" href="{{route('agenda.index')}}">"Busqueda"</a>.</p>
                       </div>
                     </div>
                     <div class="divide-y divide-gray-200">
@@ -41,21 +41,21 @@
                             <input type="text" name="elemento_creo" id="elemento_creo" class="form-control" hidden value="{{Auth::user()->id}}" >
                             <input type="text" name="elemento_edito" id="elemento_edito" class="form-control" hidden value="{{Auth::user()->id}}" >
                           <label class="leading-loose">Nombre</label>
-                          <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Nombre completo" name="nombre" id="nombre" >
+                          <x-jet-input type="text" placeholder="Nombre completo" name="nombre" id="nombre" />
                         </div>
                         <div class="flex items-center  content space-x-4">
                           <div class="flex flex-col flex-1">
                               <label class="leading-loose">Alias</label>
-                              <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="alias" id="alias" >
+                              <x-jet-input type="text" placeholder="Opcional" name="alias" id="alias" />
                           </div>
                           <div class="flex flex-col flex-1">
                               <label class="leading-loose">Lugar de Origen</label>
-                              <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="origen" id="origen" >
+                              <x-jet-input type="text" placeholder="Opcional" name="origen" id="origen" />
                           </div>
                           <div class="flex flex-col flex-1">
                             <label class="leading-loose">Fecha de Nacimiento</label>
                             <div class="relative focus-within:text-gray-600 text-gray-400">
-                              <input type="date" class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="26/02/2020" name="fecha_nacimiento" id="fecha_nacimiento" >
+                                <x-jet-input type="date" class="pl-10 w-full " placeholder="26/02/2020" name="fecha_nacimiento" id="fecha_nacimiento" />
                               <div class="absolute left-3 top-2">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                               </div>
@@ -68,29 +68,29 @@
                           <div class="flex items-center  content space-x-4">
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Calle</label>
-                                  <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_calle" id="d_calle">
+                                  <x-jet-input type="text" placeholder="Opcional" name="d_calle" id="d_calle"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Numero</label>
-                                  <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_numero" id="d_numero">
+                                  <x-jet-input type="text" placeholder="Opcional" name="d_numero" id="d_numero"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Colonia</label>
-                                  <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_colonia" id="d_colonia">
+                                  <x-jet-input type="text"  placeholder="Opcional" name="d_colonia" id="d_colonia"/>
                               </div>
                               <div class="flex flex-col flex-1/2">
                                   <label class="leading-loose">Codigo Postal</label>
-                                  <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_cp" id="d_cp">
+                                  <x-jet-input type="text"  placeholder="Opcional" name="d_cp" id="d_cp"/>
                               </div>
                           </div>
                           <div class="flex items-center  content space-x-4">
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Estado</label>
-                                  <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_estado" id="d_estado">
+                                  <x-jet-input type="text" placeholder="Opcional" name="d_estado" id="d_estado"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Municipio</label>
-                                  <select name="municipio_id" id="municipio_id" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600">
+                                  <select name="municipio_id" id="municipio_id" class="border-stone-300 focus:border-stone-300 focus:ring focus:ring-stone-200 focus:ring-opacity-50 rounded-md shadow-sm">
                                     @foreach($municipios as $municipio)
                                     @if ($loop->first)
                                         <option value="{{ $municipio->id }}" selected="selected">{{ $municipio->nombre }}</option>
@@ -106,7 +106,7 @@
                           <a class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none" href="{{ route('cancelar','/') }}">
                             <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Cancel
                           </a>
-                          <button class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none">Agregar</button>
+                          <x-jet-button class="ml-4">Agregar</x-jet-button>
                       </div>
                     </div>
                   </div>

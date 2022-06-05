@@ -1,10 +1,10 @@
 <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
     <div class="mt-8 text-2xl">
-        Inicio
+        Bienvenido a PhoneBook
     </div>
 
     <div class="mt-6 text-gray-500">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor deserunt obcaecati alias nisi corrupti quidem repudiandae iusto tempore. Facilis amet ut ducimus! Aut saepe placeat alias eligendi ullam similique at.
+        Aplicación capas de registrar personas y a esas personas registrar equipos celulares y a esos equipos celulares registrarle agendas telefonicas.
     </div>
 </div>
 
