@@ -3,7 +3,7 @@
 <section class="antialiased text-gray-600 min-w-full sm:px-3 sm:py-3 lg:px-6 lg:py-6">
     <div class="flex flex-col justify-center h-full">
         <!-- Table -->
-        <div class="border border-slate-300 bg-white shadow-lg rounded-sm border border-gray-200">
+        <div class="border border-slate-300 bg-white shadow-lg rounded-sm">
             <header class="px-5 py-4 border-b border-gray-100">
                     <div class="flex justify-between">
                         <h2 class="font-semibold text-gray-800">{{ __("PERSONS")}}</h2>

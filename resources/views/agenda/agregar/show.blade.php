@@ -2,7 +2,7 @@
     <div class="py-14 px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto">
         <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
         <div class="mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
-            <div class="bg-gray-50 dark:bg-gray-800 w-full xl:w-96 flex justify-between items-center md:items-start px-4 py-6 md:p-6 xl:p-8 flex-col">
+            <div class="border border-stone-300 bg-gray-50 dark:bg-gray-800 w-full xl:w-96 flex justify-between items-center md:items-start px-4 py-6 md:p-6 xl:p-8 flex-col">
                 <h3 class="text-xl dark:text-white font-semibold leading-5 text-stone-500">{{ __("PERSON")}}:</h3>
                 <div class="flex flex-col md:flex-row xl:flex-col justify-start items-stretch h-full w-full md:space-x-6 lg:space-x-8 xl:space-x-0">
                     <div class="flex flex-col justify-start items-start flex-shrink-0">
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="flex flex-col justify-start items-start w-full space-y-4 md:space-y-6 xl:space-y-8">
-                <div class="flex flex-col justify-start items-start dark:bg-gray-800 bg-gray-50 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
+                <div class="border border-stone-300 flex flex-col justify-start items-start dark:bg-gray-800 bg-stone-50 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
                     <h3 class="text-lg md:text-xl dark:text-white font-semibold leading-6 xl:leading-5 text-stone-500">EQUIPOS CELULARES</h3>
                     @foreach($detenido->celulars as $celular)
                         <div class="mt-4 md:mt-6 flex flex-col md:flex-row justify-start items-start md:items-center md:space-x-6 xl:space-x-8 w-full">
@@ -52,7 +52,7 @@
                             <img class="w-full hidden md:block" src="{{$celular->foto}}fotocelular.jpg" alt="dress" />
                             <img class="w-full md:hidden" src="{{$celular->foto}}t_celular.jpeg" alt="dress" />
                             </div>
-                            <div class="border-b border-gray-200 md:flex-row flex-col flex justify-between items-start w-full pb-8 space-y-4 md:space-y-0">
+                            <div class="border-b border-stone-300 md:flex-row flex-col flex justify-between items-start w-full pb-8 space-y-4 md:space-y-0">
                                 <div class="w-full flex flex-col justify-start items-start space-y-8">
                                     <h3 class="text-xl dark:text-white xl:text-2xl font-semibold leading-6 text-stone-500">{{$celular->marca}} {{$celular->modelo}}</h3>
                                     <div class="flex justify-start items-start flex-col space-y-2">
@@ -66,7 +66,7 @@
                                         <a class="hover:text-stone-700 text-stone-500" href=" {{ route('celular.show',$celular->id) }}">Numero de Contactos: <b>{{$celular->contacts->count()}}</b></a>
                                     </p>
                                     <p>
-                                        <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-2 border border-gray-400 rounded shadow" data-modal-toggle="extralarge-modal"  href=" {{ route('celular.edit',$celular->id)}}" >Editar <i class="fas fa-edit"></i></a>
+                                        <a class="bg-white hover:bg-gray-100 text-stone-600 font-semibold py-2 px-2 border border-stone-400 rounded shadow" data-modal-toggle="extralarge-modal"  href=" {{ route('celular.edit',$celular->id)}}" >Editar <i class="fas fa-edit text-stone-500"></i></a>
                                     </p>
                                 </div>
                             </div>

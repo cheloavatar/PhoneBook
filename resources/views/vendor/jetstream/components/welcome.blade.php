@@ -1,11 +1,11 @@
 <div class="py-6 sm:px-20 bg-white border-b border-gray-200">
-    <div class="mt-6 text-3xl text-stone-600">
-        BIENVENIDO A PHONEBOOK
+    <div class="mt-6 text-2xl text-stone-600">
+        <b>BIENVENIDO A PHONEBOOK</b>
     </div>
     <div class="flex flex-row">
-        <div class="basis-4/5 text-stone-500 my-8 aling-middle text-justify text-2xl">
-           <span class="text-justify">Aplicación capaz de registrar personas y a esas personas registrar equipos celulares y a esos equipos celulares registrarle agendas telefónicas. Útil para la relación de contactos entre personas y equipos celulares.
-La aplicación permite almacenar contactos manual mente o a partir de una lista de contactos en formato CVS, XSL y xlsx (siempre y cuando respete la nomenclatura: en la primera fila del Excel nombre y la segunda teléfono) 
+        <div class="basis-4/5 text-stone-500 my-8 aling-middle text-justify text-lg">
+            <span class="text-justify">Aplicación capaz de registrar personas y a esas personas registrar equipos celulares y a esos equipos celulares registrarle agendas telefónicas. Útil para la relación de contactos entre personas y equipos celulares.
+La aplicación permite almacenar contactos manual mente o a partir de una lista de contactos en formato CVS, XSL y xlsx (siempre y cuando respete la nomenclatura: en la primera fila del Excel nombre y la segunda teléfono)
 .</span>
         </div>
         <div class="basis-1/5 flex justify-center">
@@ -69,7 +69,7 @@ La aplicación permite almacenar contactos manual mente o a partir de una lista 
 
         <div class="ml-12">
             <div class="mt-2 text-sm text-stone-500">
-                Se muestra el total de equipos registrados, donde muestra el IMEI, el número de celular con el que se registro así como a quien pertenece.            
+                Se muestra el total de equipos registrados, donde muestra el IMEI, el número de celular con el que se registro así como a quien pertenece.
             </div>
             <a href="#">
                 <div class="mt-3 flex items-center text-sm font-semibold text-stone-600">
@@ -91,9 +91,9 @@ La aplicación permite almacenar contactos manual mente o a partir de una lista 
 
         <div class="ml-12">
             <div class="mt-2 text-sm text-stone-500">
-            Para utilizar PowerBook lo primero que se tiene que hacer es registrar una persona, una vez registrada esa persona se tiene que acceder al listado de la personas y dar click en el ojo para acceder a el panel de persona (panel donde se muestran los celulares que pose)…
+            Para utilizar PhoneBook lo primero que se tiene que hacer es <b class="text-lg"><a href="{{ route('agenda.create') }}">registrar una persona</a></b>, una vez registrada esa persona se tiene que acceder al <b class="text-lg"><a href="{{ route('agenda.create') }}">listado de la personas</b></a> y dar click en el ojo para acceder a el panel de persona (panel donde se muestran los celulares que pose)…
             </div>
-            <a href="#">
+            <a href="{{ route('agenda.usermanual') }}">
                 <div class="mt-3 flex items-center text-sm font-semibold text-stone-600">
                         <div>Leer más...</div>
 

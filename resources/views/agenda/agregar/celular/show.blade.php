@@ -33,10 +33,10 @@
             <div class="flex flex-col justify-start w-full space-y-4 md:space-y-6 xl:space-y-8">
                 <div class="border border-stone-300 flex flex-col justify-start dark:bg-stone-800 bg-stone-50 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
                     <div class="flex justify-end">
-                        <a class=" bg-stone hover:bg-stone-100 text-stone-600 font-semibold py-2 px-2 mx-2 border border-stone-400 rounded shadow " href="#" onclick="openModal(true)">
+                        <a class=" bg-stone hover:bg-stone-200 text-stone-600 font-semibold py-2 px-2 mx-2 border border-stone-400 rounded shadow " href="#" onclick="openModal(true)">
                             Agregar <i class="fa-solid fa-user-plus"></i>
                         </a>
-                        <a class=" bg-stone hover:bg-stone-100 text-stone-600 font-semibold py-2 px-2 mx-2 border border-stone-400 rounded shadow "  href="#"  data-modal-toggle="default-modal">
+                        <a class=" bg-stone hover:bg-stone-200 text-stone-600 font-semibold py-2 px-2 mx-2 border border-stone-400 rounded shadow "  href="#"  data-modal-toggle="default-modal">
                             Agregar <i class="fa-solid fa-file-csv"></i>
                         </a>
                     </div>
@@ -50,38 +50,38 @@
                     <div class="p-10 w-full">
                         <div class="overflow-y-auto">
                             <table class="table-auto w-full">
-                                <thead class="w-full font-semibold uppercase text-gray-500 bg-gray-200">
+                                <thead class="w-full font-semibold uppercase text-stone-500 bg-stone-300">
                                     <tr>
-                                        <th class="border border-slate-300 p-2 h-14 whitespace-nowrap">
+                                        <th class="border border-stone-400 p-2 h-14 whitespace-nowrap">
                                             <div class="font-semibold text-center">ID</div>
                                         </th>
-                                        <th class="border border-slate-300 p-2 w-128 whitespace-nowrap">
+                                        <th class="border border-stone-400 p-2 w-128 whitespace-nowrap">
                                             <div class="font-semibold text-center">NOMBRE DEL CONTACTO</div>
                                         </th>
-                                        <th class="border border-slate-300 p-2 w-64 whitespace-nowrap">
+                                        <th class="border border-stone-400 p-2 w-64 whitespace-nowrap">
                                             <div class="font-semibold text-center">TELEFONO</div>
                                         </th>
-                                        <th class="border border-slate-300 p-2 w-32 whitespace-nowrap">
+                                        <th class="border border-stone-400 p-2 w-32 whitespace-nowrap">
                                             <div class="font-semibold text-center">Agregar Equipo</div>
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-sm  divide-gray-100">
                                     @foreach($contacts as $contact)
-                                    <tr class="hover:bg-gray-100 ">
-                                        <td class="border border-slate-300 p-2 whitespace-nowrap text-center">
+                                    <tr class="hover:bg-stone-100 ">
+                                        <td class="border border-stone-400 p-2 whitespace-nowrap text-center text-stone-500">
                                             {{$contact->id}}
                                         </td>
-                                        <td class=" border border-slate-300 p-2 whitespace-nowrap text-center">
-                                            <div class="font-medium text-gray-800">{{$contact->nombre}}</div>
+                                        <td class=" border border-stone-400 p-2 whitespace-nowrap text-center">
+                                            <div class="font-medium text-stone-500 ">{{$contact->nombre}}</div>
                                         </td>
-                                        <td class="border border-slate-300 p-2 whitespace-nowrap text-center">
-                                            <div class="font-medium text-gray-800">{{$contact->telefono}}</div>
+                                        <td class="border border-stone-400 p-2 whitespace-nowrap text-center">
+                                            <div class="font-medium text-stone-500">{{$contact->telefono}}</div>
                                         </td>
-                                        <td class=" border border-slate-300 p-2 whitespace-nowrap">
+                                        <td class=" border border-stone-500 p-2 whitespace-nowrap">
                                             <div class="text-lg text-center py-2">
-                                                <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-3 mr-2 border border-gray-400 rounded shadow" href=" #"><i class="far fa-edit"></i></a>
-                                                <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-3 mr-2 border border-gray-400 rounded shadow" href=" #"><i class="fa-solid fa-eraser"></i></a>
+                                                <a class="bg-stone hover:bg-stone-200 text-stone-600 font-semibold py-2 px-3 mr-2 border border-stone-500 rounded shadow" href=" #"><i class="far fa-edit"></i></a>
+                                                <a class="bg-stone hover:bg-stone-200 text-stone-600 font-semibold py-2 px-3 mr-2 border border-stone-500 rounded shadow" href=" #"><i class="fa-solid fa-eraser"></i></a>
                                             </div>
                                         </td>
                                     </tr>

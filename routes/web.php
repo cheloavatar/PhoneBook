@@ -42,5 +42,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/busqueda', function () {
     return view('agenda.busqueda.index');
 })->name('busqueda');
 
+//UserManual
+Route::get('/usermanual', function () {
+    return view('agenda.inicio.usermanual.index');
+})->name('agenda.usermanual');
 //CANCELAR ACCION
 Route::get('agenda/{ruta}', function($ruta){return redirect()->route($ruta);})->name('cancelar');
