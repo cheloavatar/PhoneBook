@@ -3,7 +3,7 @@
         <div class="divide-y divide-gray-200">
             <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                 <div class="mb-5 text-center">
-                    <div class="mx-auto w-32 h-32 mb-2 border relative bg-gray-100 mb-4 shadow-inset">
+                    <div class="mx-auto w-32 h-32 border relative bg-gray-100 mb-4 shadow-inset">
                         <img id="image" class="object-cover w-full h-32" :src="image" />
                     </div>
                     <input type="text" name="elemento_creo" id="elemento_creo" class="form-control" hidden value="{{$detenido->elemento_creo}}" >
@@ -16,7 +16,7 @@
                         Buscar Foto
                     </label>
                     <div class="mx-auto w-48 text-gray-500 text-xs text-center mt-1">Click para agregar fotografia del equipo</div>
-                    <input name="fileInput" id="fileInput" accept="image/*" class="hidden" type="file" @change="let file = document.getElementById('fileInput').files[0]; var reader = new FileReader();  reader.onload = (e) => image = e.target.result; reader.readAsDataURL(file);">
+                    <input required name="fileInput" id="fileInput" accept="image/*" class="hidden" type="file" @change="let file = document.getElementById('fileInput').files[0]; var reader = new FileReader();  reader.onload = (e) => image = e.target.result; reader.readAsDataURL(file);">
                 </div>
                 <div class="flex items-center  content space-x-4">
                     <div class="flex flex-col flex-1">
@@ -29,13 +29,13 @@
                     </div>
                     <div class="flex flex-col flex-1">
                         <label class="leading-loose">Telefono</label>
-                        <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="telefono" id="telefono" >
+                        <input type="tel" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="telefono" id="telefono" >
                     </div>
                 </div>
                 <div class="flex items-center  content space-x-4">
                     <div class="flex flex-col flex-1">
                         <label class="leading-loose">Imei</label>
-                        <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="imei" id="imei" >
+                        <input type="number" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="imei" id="imei" >
                     </div>
                     <div class="flex flex-col flex-1">
                         <label class="leading-loose">Color</label>

@@ -18,7 +18,7 @@ class Celular extends Model
 	protected $table = 'celulars';
 	protected $hidden = ['created_at','updated_at'];
 
-    protected $fillable=['slug','marca','modelo','telefono','color','imei','foto', 'elemento_creo', 'elemento_edito','deleted_at','detenido_id'];
+    protected $fillable=['slug','marca','modelo','telefono','color','imei','foto','nota','elemento_creo', 'elemento_edito','deleted_at','detenido_id'];
 
     //Relacion muchos a muchos
     public function detenidos(){

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('marca');
             $table->string('modelo');
+            $table->string('nota');
             $table->bigInteger('telefono');
             $table->bigInteger('imei');
             $table->string('foto');

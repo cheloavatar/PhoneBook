@@ -107,6 +107,7 @@ class CelularControler extends Controller
             $celular->modelo = $request->modelo;
             $celular->telefono = $request->telefono;
             $celular->imei = $request->imei;
+            $celular->nota = $request->nota;
             $celular->color = $request->color;
             $celular->elemento_edito = $request->elemento_edito;
             $celular->fotodetenido()->update($urlimagen);
@@ -118,6 +119,7 @@ class CelularControler extends Controller
             $celular->modelo = $request->modelo;
             $celular->telefono = $request->telefono;
             $celular->imei = $request->imei;
+            $celular->nota = $request->nota;
             $celular->color = $request->color;
             $celular->elemento_edito = $request->elemento_edito;
             $celular->save();
@@ -165,6 +167,7 @@ class CelularControler extends Controller
         'modelo'=>$request->modelo,
         'telefono'=>$request->telefono,
         'imei'=>$request->imei,
+        'nota'=>$request->nota,
         'foto'=>$request->url_f.$request->marca.'/'.$request->modelo.'/',
         'elemento_creo'=>$request->elemento_creo,
         'elemento_edito'=>$request->elemento_edito,

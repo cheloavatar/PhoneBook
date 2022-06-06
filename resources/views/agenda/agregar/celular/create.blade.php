@@ -51,7 +51,7 @@
                                     <div class="flex items-center  content space-x-4">
                                         <div class="flex flex-col flex-1">
                                             <label class="leading-loose">Imei</label>
-                                            <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="imei" id="imei" >
+                                            <input type="number" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="imei" id="imei" >
                                         </div>
                                         <div class="flex flex-col flex-1">
                                             <label class="leading-loose">Notas</label>
