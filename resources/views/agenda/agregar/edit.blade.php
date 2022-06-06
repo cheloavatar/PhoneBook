@@ -46,21 +46,21 @@
                             <input type="text" name="slug" id="slug" class="form-control" hidden value="{{$detenido->slug}}" >
                             <input type="text" name="elemento_edito" id="elemento_edito" class="form-control" hidden value="{{Auth::user()->id}}" >
                           <label class="leading-loose">Nombre</label>
-                          <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Nombre completo" name="nombre" id="nombre" value="{{$detenido->nombre}}" >
+                          <input type="text" required class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Nombre completo" name="nombre" id="nombre" value="{{$detenido->nombre}}" >
                         </div>
                         <div class="flex items-center  content space-x-4">
                           <div class="flex flex-col flex-1">
                               <label class="leading-loose">Alias</label>
-                              <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="alias" id="alias" value="{{$detenido->alias}}" >
+                              <input type="text" required class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="alias" id="alias" value="{{$detenido->alias}}" >
                           </div>
                           <div class="flex flex-col flex-1">
                               <label class="leading-loose">Lugar de Origen</label>
-                              <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="origen" id="origen" value="{{$detenido->origen}}">
+                              <input type="text" required class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="origen" id="origen" value="{{$detenido->origen}}">
                           </div>
                           <div class="flex flex-col flex-1">
                             <label class="leading-loose">Fecha de Nacimiento</label>
                             <div class="relative focus-within:text-gray-600 text-gray-400">
-                              <input type="date" class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="26/02/2020" name="fecha_nacimiento" id="fecha_nacimiento" value="{{$detenido->fecha_nacimiento}}">
+                              <input type="date" required class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="26/02/2020" name="fecha_nacimiento" id="fecha_nacimiento" value="{{$detenido->fecha_nacimiento}}">
                               <div class="absolute left-3 top-2">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                               </div>
@@ -73,29 +73,29 @@
                           <div class="flex items-center  content space-x-4">
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Calle y Numero</label>
-                                  <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_calle" id="d_calle" value="{{$detenido->direccions->calle}}">
+                                  <input type="text" required class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_calle" id="d_calle" value="{{$detenido->direccions->calle}}">
                               </div>
                               <div class="flex flex-col flex-1/2">
                                   <label class="leading-loose">Numero</label>
-                                  <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_numero" id="d_numero" value="{{$detenido->direccions->numero}}">
+                                  <input type="text" required class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_numero" id="d_numero" value="{{$detenido->direccions->numero}}">
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Colonia</label>
-                                  <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_colonia" id="d_colonia" value="{{$detenido->direccions->colonia}}">
+                                  <input type="text" required class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_colonia" id="d_colonia" value="{{$detenido->direccions->colonia}}">
                               </div>
                             </div>
                             <div class="flex items-center  content space-x-4">
                                 <div class="flex flex-col flex-1/2">
                                     <label class="leading-loose">Codigo Postal</label>
-                                    <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_cp" id="d_cp" value="{{$detenido->direccions->cp}}">
+                                    <input type="text" required class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_cp" id="d_cp" value="{{$detenido->direccions->cp}}">
                                 </div>
                                 <div class="flex flex-col flex-1">
                                     <label class="leading-loose">Estado</label>
-                                    <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_estado" id="d_estado" value="{{$detenido->direccions->estado}}">
+                                    <input type="text" required class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="d_estado" id="d_estado" value="{{$detenido->direccions->estado}}">
                                 </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Municipio</label>
-                                  <select name="municipio_id" id="municipio_id" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600">
+                                  <select required name="municipio_id" id="municipio_id" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600">
                                     @foreach($municipios as $municipio)
                                     @if ($municipio->id==$detenido->direccions->municipio_id)
                                         <option value="{{ $municipio->id }}" selected="selected">{{ $municipio->nombre }}</option>

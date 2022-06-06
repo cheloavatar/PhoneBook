@@ -40,22 +40,22 @@
                         <div class="flex flex-col">
                             <input type="text" name="elemento_creo" id="elemento_creo" class="form-control" hidden value="{{Auth::user()->id}}" >
                             <input type="text" name="elemento_edito" id="elemento_edito" class="form-control" hidden value="{{Auth::user()->id}}" >
-                          <label class="leading-loose">Nombre</label>
-                          <x-jet-input type="text" placeholder="Nombre completo" name="nombre" id="nombre" />
+                          <label class="leading-loose" >Nombre</label>
+                          <x-jet-input type="text" required placeholder="Nombre completo" name="nombre" id="nombre" />
                         </div>
                         <div class="flex items-center  content space-x-4">
                           <div class="flex flex-col flex-1">
                               <label class="leading-loose">Alias</label>
-                              <x-jet-input type="text" placeholder="Opcional" name="alias" id="alias" />
+                              <x-jet-input type="text" required placeholder="Opcional" name="alias" id="alias" />
                           </div>
                           <div class="flex flex-col flex-1">
                               <label class="leading-loose">Lugar de Origen</label>
-                              <x-jet-input type="text" placeholder="Opcional" name="origen" id="origen" />
+                              <x-jet-input type="text" required placeholder="Opcional" name="origen" id="origen" />
                           </div>
                           <div class="flex flex-col flex-1">
                             <label class="leading-loose">Fecha de Nacimiento</label>
                             <div class="relative focus-within:text-gray-600 text-gray-400">
-                                <x-jet-input type="date" class="pl-10 w-full " placeholder="26/02/2020" name="fecha_nacimiento" id="fecha_nacimiento" />
+                                <x-jet-input type="date" required class="pl-10 w-full " placeholder="26/02/2020" name="fecha_nacimiento" id="fecha_nacimiento" />
                               <div class="absolute left-3 top-2">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                               </div>
@@ -68,29 +68,29 @@
                           <div class="flex items-center  content space-x-4">
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Calle</label>
-                                  <x-jet-input type="text" placeholder="Opcional" name="d_calle" id="d_calle"/>
+                                  <x-jet-input type="text" required placeholder="Opcional" name="d_calle" id="d_calle"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Numero</label>
-                                  <x-jet-input type="text" placeholder="Opcional" name="d_numero" id="d_numero"/>
+                                  <x-jet-input type="text" required placeholder="Opcional" name="d_numero" id="d_numero"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Colonia</label>
-                                  <x-jet-input type="text"  placeholder="Opcional" name="d_colonia" id="d_colonia"/>
+                                  <x-jet-input type="text"  required placeholder="Opcional" name="d_colonia" id="d_colonia"/>
                               </div>
                               <div class="flex flex-col flex-1/2">
                                   <label class="leading-loose">Codigo Postal</label>
-                                  <x-jet-input type="text"  placeholder="Opcional" name="d_cp" id="d_cp"/>
+                                  <x-jet-input type="text"  required placeholder="Opcional" name="d_cp" id="d_cp"/>
                               </div>
                           </div>
                           <div class="flex items-center  content space-x-4">
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Estado</label>
-                                  <x-jet-input type="text" placeholder="Opcional" name="d_estado" id="d_estado"/>
+                                  <x-jet-input type="text" required placeholder="Opcional" name="d_estado" id="d_estado"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose">Municipio</label>
-                                  <select name="municipio_id" id="municipio_id" class="border-stone-300 focus:border-stone-300 focus:ring focus:ring-stone-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                                  <select required name="municipio_id" id="municipio_id" class="border-stone-300 focus:border-stone-300 focus:ring focus:ring-stone-200 focus:ring-opacity-50 rounded-md shadow-sm">
                                     @foreach($municipios as $municipio)
                                     @if ($loop->first)
                                         <option value="{{ $municipio->id }}" selected="selected">{{ $municipio->nombre }}</option>
