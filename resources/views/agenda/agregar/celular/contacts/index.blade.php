@@ -8,7 +8,7 @@
                 <div class="flex justify-between">
                     <h2 class="font-semibold text-gray-800">CONTACTOS</h2>
                     <form action="" >
-                        <input type="text" name="buscar" class="mb-5 xl:w-64" placeholder="Telefono o nombre de contacto " value="{{ request()->get('buscar') }}">
+                        <x-jet-input type="text" name="buscar" class="mb-5 xl:w-64" placeholder="Telefono o nombre de contacto " value="{{ request()->get('buscar') }}"/>
                             <button type="submit" ><i class="fas fa-search"></i></button>
                     </form>
                 </div>
@@ -17,47 +17,47 @@
                 <b class="md-15" ><span style="color:blue;">{{$contacts->total()}}</span> REGISTRO</b>
                 <div class="overflow-x-auto">
                     <table class="table-auto w-full">
-                        <thead class="w-full font-semibold uppercase text-gray-500 bg-gray-200">
+                        <thead class="w-full font-semibold uppercase text-stone-500 bg-stone-200">
                             <tr>
-                                <th class="border border-slate-300 p-1 h-8 whitespace-nowrap">
+                                <th class="border border-stone-400 p-1 h-8 whitespace-nowrap">
                                     <div class="font-semibold text-center">ID</div>
                                 </th>
-                                <th class="border border-slate-300 p-1 w-128 whitespace-nowrap">
+                                <th class="border border-stone-400 p-1 w-128 whitespace-nowrap">
                                     <div class="font-semibold text-center">NOMBRE DEL CONTACTO</div>
                                 </th>
-                                <th class="border border-slate-300 p-1 w-128 whitespace-nowrap">
+                                <th class="border border-stone-400 p-1 w-128 whitespace-nowrap">
                                     <div class="font-semibold text-center">TELEFONO</div>
                                 </th>
-                                <th class="border border-slate-300 p-1 w-16 whitespace-nowrap">
+                                <th class="border border-stone-400 p-1 w-16 whitespace-nowrap">
                                     <div class="font-semibold text-center">CELULAR</div>
                                 </th>
-                                <th class="border border-slate-300 p-1 w-16 whitespace-nowrap">
+                                <th class="border border-stone-400 p-1 w-16 whitespace-nowrap">
                                     <div class="font-semibold text-center">DETENIDO</div>
                                 </th>
-                                <th class="border border-slate-300 p-1 w-32 whitespace-nowrap">
+                                <th class="border border-stone-400 p-1 w-32 whitespace-nowrap">
                                     <div class="font-semibold text-center">ACCIONES</div>
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="text-sm  divide-gray-100">
+                        <tbody class="text-sm  divide-stone-100">
                             @foreach($contacts as $contact)
-                            <tr class="hover:bg-gray-100 ">
-                                <td class="border border-slate-300 p-1 whitespace-nowrap text-center">
+                            <tr class="hover:bg-stone-100 ">
+                                <td class="border border-stone-400 p-1 whitespace-nowrap text-center">
                                     {{$contact->id}}
                                 </td>
-                                <td class=" border border-slate-300 p-1 whitespace-nowrap text-left">
+                                <td class=" border border-stone-400 p-1 whitespace-nowrap text-left">
                                     <div class="font-medium text-gray-800">{{$contact->nombre}}</div>
                                 </td>
-                                <td class="border border-slate-300 p-1 whitespace-nowrap text-center">
+                                <td class="border border-stone-400 p-1 whitespace-nowrap text-center">
                                     <div class="font-medium text-gray-800">{{$contact->telefono}}</div>
                                 </td>
-                                <td class="border border-slate-300 p-1 whitespace-nowrap text-center">
+                                <td class="border border-stone-400 p-1 whitespace-nowrap text-center">
                                     <div class="font-medium text-gray-800"><span class="dark:text-gray-400 text-gray-400">EQUIPO: </span>{{$contact->celulars->marca}} {{$contact->celulars->modelo}},
                                         <span class="dark:text-gray-400 text-gray-400"> IMEI:</span> {{$contact->celulars->imei}}
                                         <span class="dark:text-gray-400 text-gray-400"> TEL: </span>{{$contact->celulars->telefono}}
                                     </div>
                                 </td>
-                                <td class="border border-slate-300 p-1 whitespace-nowrap text-center flex justify-center">
+                                <td class="border border-stone-300 p-1 flex justify-center">
                                     <a href="{{ route('agenda.show',$contact->detenido_id) }}">
                                     <img data-tooltip-target="tooltip-light" data-tooltip-style="light" src="
                                             @if($contact->detenidos->fotodetenido !=null)
@@ -67,15 +67,15 @@
                                             @endif"
                                             width="40" height="40" alt="{{$contact->detenidos->nombre}}">
                                     </a>
-                                            <div id="tooltip-light" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 shadow-sm opacity-0 tooltip">
-                                                {{$contact->detenidos->nombre}}
+                                            <div id="tooltip-light" role="tooltip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-stone-900 bg-white rounded-lg border border-stone-200 shadow-sm opacity-0 tooltip">
+                                                <b>{{$contact->detenidos->nombre}}</b>
                                                 <div class="tooltip-arrow" data-popper-arrow></div>
                                             </div>
                                 </td>
-                                <td class=" border border-slate-300 p-1 whitespace-nowrap">
+                                <td class=" border border-stone-400 p-1 whitespace-nowrap">
                                     <div class="text-lg text-center py-1">
-                                        <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 mr-2 border border-gray-400 rounded shadow" href=" #"><i class="far fa-edit"></i></a>
-                                        <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 mr-2 border border-gray-400 rounded shadow" href=" #"><i class="fa-solid fa-eraser"></i></a>
+                                        <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 mr-2 border border-gray-400 rounded shadow" href=" #"><i class="far fa-edit text-stone-700"></i></a>
+                                        <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 mr-2 border border-gray-400 rounded shadow" href=" #"><i class="fa-solid fa-eraser text-stone-700"></i></a>
                                     </div>
                                 </td>
                             </tr>

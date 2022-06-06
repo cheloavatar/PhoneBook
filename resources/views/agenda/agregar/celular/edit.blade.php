@@ -8,8 +8,8 @@
                 <div class="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
                   <div class="">
                     <div class="mb-5 text-center">
-                        <div class="mx-auto w-32 h-32 mb-2 border relative bg-gray-100 mb-4 shadow-inset">
-                            <img id="image" class="object-cover w-full h-32" :src="image" />
+                        <div class="mx-auto w-32 h-32 border relative bg-gray-100 mb-4 shadow-inset">
+                            <img id="image" class="object-center w-full h-32" :src="image" />
                         </div>
                         <input type="text" name="elemento_edito" id="elemento_edito" class="form-control" hidden value="{{Auth::user()->id}}" >
                         <label

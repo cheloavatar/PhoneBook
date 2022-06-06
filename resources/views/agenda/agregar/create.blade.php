@@ -20,7 +20,7 @@
                         <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                           <div class="mb-5 text-center">
                             <div class="mx-auto w-32 h-32 mb-2 border rounded-full relative bg-gray-100 mb-4 shadow-inset">
-                                <img id="image" class="object-cover w-full h-32 rounded-full" :src="image" />
+                                <img id="image" class="object-center   w-full h-32 rounded-full" :src="image" />
                             </div>
 
                             <label
