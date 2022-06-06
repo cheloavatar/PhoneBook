@@ -2,49 +2,49 @@
     <div class="py-10 px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto">
         <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
         <div class="mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
-            <div class="bg-gray-50 dark:bg-gray-800 w-full xl:w-96 flex justify-between items-center md:items-start px-4 py-6 md:p-6 xl:p-8 flex-col">
+            <div class="border border-stone-300 bg-stone-50 dark:bg-stone-600 w-full xl:w-96 flex justify-between items-center md:items-start px-4 py-6 md:p-6 xl:p-8 flex-col">
                 <div class="flex flex-col md:flex-row xl:flex-col justify-start items-stretch h-full w-full md:space-x-6 lg:space-x-8 xl:space-x-0">
                     <div class="flex flex-col justify-center items-center flex-shrink-0">
-                        <h3 class="text-2xl	 dark:text-white font-bold text-gray-800 uppercase">{{$celular->marca}} {{$celular->modelo}}</h3>
-                        <div class="flex justify-center w-full items-center space-x-4 py-8 border-b border-gray-200">
+                        <h3 class="text-2xl	 dark:text-white font-bold text-stone-600 uppercase">{{$celular->marca}} {{$celular->modelo}}</h3>
+                        <div class="flex justify-center w-full items-center space-x-4 py-8 border-b border-stone-200">
                             <img class="w-48" src="{{$celular->foto}}/fotocelular.jpg" alt="avatar" />
                         </div>
                     </div>
                     <div class="flex justify-between xl:h-full items-stretch w-full flex-col mt-6 md:mt-0">
                         <div class="flex justify-center md:justify-start xl:flex-col flex-col md:space-x-6 lg:space-x-8 xl:space-x-0 space-y-4 xl:space-y-12 md:space-y-0 md:flex-row items-center md:items-start">
                             <div class="flex justify-center md:justify-start items-center md:items-start flex-col space-y-2 xl:mt-8">
-                                <p class="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-gray-800">Teléfono:</p>
-                                <p class="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">
+                                <p class="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-stone-600">Teléfono:</p>
+                                <p class="w-48 lg:w-full dark:text-stone-300 xl:w-48 text-center md:text-left text-sm leading-5 text-stone-500">
                                     {{$celular->telefono}}
                                 </p>
-                                <p class="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-gray-800">Imei:</p>
-                                <p class="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600"> {{$celular->imei}}</p>
-                                <p class="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-gray-800">Color:</p>
-                                <p class="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600"> {{$celular->color}}</p>
+                                <p class="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-stone-600">Imei:</p>
+                                <p class="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-stone-500"> {{$celular->imei}}</p>
+                                <p class="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-stone-600">Color:</p>
+                                <p class="w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-stone-500"> {{$celular->color}}</p>
                             </div>
                             <div class="flex w-full justify-center items-center md:justify-start md:items-start mt-6">
                                 <a   role="link" href="{{ route('celular.edit',$celular->id)}}"
-                            class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-8 border border-gray-400 rounded shadow">Editar Características</a>
+                            class="bg-stone hover:bg-stone-200 text-stone-600 font-semibold py-1 px-8 border border-stone-400 rounded shadow">Editar Características</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="flex flex-col justify-start w-full space-y-4 md:space-y-6 xl:space-y-8">
-                <div class="flex flex-col justify-start dark:bg-gray-800 bg-gray-50 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
+                <div class="border border-stone-300 flex flex-col justify-start dark:bg-stone-800 bg-stone-50 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
                     <div class="flex justify-end">
-                        <a class=" bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-2 mx-2 border border-gray-400 rounded shadow " href="#" onclick="openModal(true)">
+                        <a class=" bg-stone hover:bg-stone-100 text-stone-600 font-semibold py-2 px-2 mx-2 border border-stone-400 rounded shadow " href="#" onclick="openModal(true)">
                             Agregar <i class="fa-solid fa-user-plus"></i>
                         </a>
-                        <a class=" bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-2 mx-2 border border-gray-400 rounded shadow "  href="#"  data-modal-toggle="default-modal">
+                        <a class=" bg-stone hover:bg-stone-100 text-stone-600 font-semibold py-2 px-2 mx-2 border border-stone-400 rounded shadow "  href="#"  data-modal-toggle="default-modal">
                             Agregar <i class="fa-solid fa-file-csv"></i>
                         </a>
                     </div>
                     <div class="flex justify-star">
                         <p>
-                        <a href="{{route('agenda.show', $celular->detenido_id)}}" class="hover:text-red-600 text-gray-800 mx-4 ">
+                        <a href="{{route('agenda.show', $celular->detenido_id)}}" class="hover:text-red-600 text-stone-600 mx-4 ">
                             <i class="fa-solid fa-arrow-left-long"></i></a></p>
-                        <p class="text-lg md:text-xl dark:text-white font-semibold leading-6 xl:leading-5 text-gray-800">Contactos en el Dispositivo
+                        <p class="text-lg md:text-xl dark:text-white font-semibold leading-6 xl:leading-5 text-stone-600">Contactos en el Dispositivo
                         </p>
                     </div>
                     <div class="p-10 w-full">
