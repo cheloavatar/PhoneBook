@@ -16,9 +16,9 @@ class UserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->Insert([
-        	'name'=>'CESAR ALEJANDRO GARCIA CORTES',
-        	'email'=>'cheloavatar@gmail.com',
-        	'password'=>bcrypt('chelo1990'),
+        	'name'=>'Administrator',
+        	'email'=>'admin@admin.com',
+        	'password'=>bcrypt('admin'),
             'profile_photo_path'=> 'default.jpg'
         ]);
     }
