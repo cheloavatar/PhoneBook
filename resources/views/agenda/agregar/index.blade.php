@@ -50,15 +50,18 @@
                             <tr class="hover:bg-stone-100">
                                 <td class="border border-stone-400 p-2 whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full"
-                                            src="
-                                            @if($detenido->fotodetenido !=null)
-                                            {{asset($detenido->fotodetenido->url).'/t_foto.jpeg'}}
-                                            @else
-                                            {{asset("/assets/img").'/t_foto.jpeg'}}
-                                            @endif"
-                                            width="40" height="40" alt="{{$detenido->nombre}}"></div>
-                                        <div class="text-left font-medium text-stone-600">{{$detenido->nombre}}</div>
+                                        <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3">
+                                            <a href=" {{ route('agenda.show',$detenido->id) }}">
+                                                <img class="rounded-full"
+                                                src="
+                                                @if($detenido->fotodetenido !=null)
+                                                {{asset($detenido->fotodetenido->url).'/t_foto.jpeg'}}
+                                                @else
+                                                {{asset("/assets/img").'/t_foto.jpeg'}}
+                                                @endif"
+                                                width="40" height="40" alt="{{$detenido->nombre}}"></div>
+                                                <div class="text-left font-medium text-stone-600">{{$detenido->nombre}}</div>
+                                            </a>
                                     </div>
                                 </td>
                                 <td class="border border-stone-400 p-2 whitespace-nowrap text-center">

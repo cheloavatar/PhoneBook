@@ -14,7 +14,7 @@
                 </div>
             </header>
             <div class="p-3">
-                <b class="md-15" ><span style="color:blue;">{{$contacts->total()}}</span> REGISTRO</b>
+                <b class="md-15" ><span class="text-stone-500">{{$contacts->total()}}</span> REGISTRO</b>
                 <div class="overflow-x-auto">
                     <table class="table-auto w-full">
                         <thead class="w-full font-semibold uppercase text-stone-500 bg-stone-200">

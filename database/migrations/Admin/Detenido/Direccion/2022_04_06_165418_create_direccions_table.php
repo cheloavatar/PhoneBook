@@ -24,7 +24,6 @@ return new class extends Migration
             $table->unSignedbigInteger('detenido_id');
             $table->unSignedbigInteger('municipio_id');
             $table->timestamps();
-
             $table->foreign('detenido_id')->references('id')->on('detenidos')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('municipio_id')->references('id')->on('municipios');
         });

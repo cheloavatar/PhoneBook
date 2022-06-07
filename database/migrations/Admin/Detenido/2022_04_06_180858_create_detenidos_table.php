@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('slug')->unique();
             $table->string('nombre')->unique();
-            $table->string('alias');
+            $table->string('alias')->nullable();
             $table->string('origen');
             $table->string('foto');
             $table->unSignedbigInteger('elemento_creo');
