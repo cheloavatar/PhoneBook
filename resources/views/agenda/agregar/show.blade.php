@@ -7,7 +7,12 @@
                 <div class="flex flex-col md:flex-row xl:flex-col justify-start items-stretch h-full w-full md:space-x-6 lg:space-x-8 xl:space-x-0">
                     <div class="flex flex-col justify-start items-start flex-shrink-0">
                         <div class="flex justify-center w-full md:justify-start items-center space-x-4 py-8 border-b border-stone-200">
-                            <img class="w-16" src="{{asset($detenido->foto).'/t_foto.jpeg'}}" alt="avatar" />
+                            <img class="w-16" src="@if($detenido->fotodetenido==null)
+                            {{asset('assets/img').'/t_foto.jpeg'}}
+                            @else
+                            {{asset($detenido->fotodetenido->url).'/t_foto.jpeg'}}
+                            @endif"
+                            alt="avatar" />
                             <div class="flex justify-start items-start flex-col space-y-2">
                                 <p class="text-base dark:text-white font-semibold leading-4 text-left text-stone-500">{{$detenido->nombre}}</p>
                                 <p class="text-sm dark:text-stone-300 leading-5 text-stone-600">Alias: {{$detenido->alias}}</p>

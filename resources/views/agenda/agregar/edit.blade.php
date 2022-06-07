@@ -36,7 +36,12 @@
                             @if($img_perfil->fotodetenido !=null)
                             <input id="urle" name="urle" hidden value="{{$img_perfil->fotodetenido->url}}">
                             @endif
-                            <input id="fotoguardado" hidden name="fotoguardado" value="{{$detenido->foto}}">
+                            <input id="fotoguardado" hidden name="fotoguardado" value="@if($detenido->fotodetenido==null)
+                            /assets/img/
+                            @else
+                            {{$detenido->fotodetenido->url}}
+                            @endif
+                            ">
                             <input name="foto" id="fileInput" accept="image/*" class="hidden" type="file" @change="let file = document.getElementById('fileInput').files[0];
                                 var reader = new FileReader();
                                 reader.onload = (e) => image = e.target.result; reader.readAsDataURL(file);">

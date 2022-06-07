@@ -113,7 +113,7 @@ class DetenidoController extends Controller
             $detenido->slug = Str::slug($request->nombre);
             $detenido->alias = $request->alias;
             $detenido->origen = $request->origen;
-            $detenido->foto = '/assets/img/';
+            $detenido->foto = '/uploads/images/foto_detenido/'.date("M").'/'.date("Y-m-d").'/'.$request->nombre.'/';
             $detenido->fecha_nacimiento = $request->fecha_nacimiento;
             $detenido->save();
             $detenido->direccions()->create($direccion);
