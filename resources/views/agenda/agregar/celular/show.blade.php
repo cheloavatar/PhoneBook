@@ -80,8 +80,8 @@
                                         </td>
                                         <td class=" border border-stone-500 p-2 whitespace-nowrap">
                                             <div class="text-lg text-center py-2">
-                                                <a class="bg-stone hover:bg-stone-200 text-stone-600 font-semibold py-2 px-3 mr-2 border border-stone-500 rounded shadow" href=" #"><i class="far fa-edit"></i></a>
-                                                <a class="bg-stone hover:bg-stone-200 text-stone-600 font-semibold py-2 px-3 mr-2 border border-stone-500 rounded shadow" href=" #"><i class="fa-solid fa-eraser"></i></a>
+                                                <a class="bg-gray-200 hover:bg-gray-200 text-gray-100 font-semibold py-1 px-2 mr-2 border border-gray-300 rounded shadow cursor-not-allowed" href=" #"><i class="far fa-edit text-gray-400"></i></a>
+                                                <a class="bg-gray-200 hover:bg-gray-200 text-gray-100 font-semibold py-1 px-2 mr-2 border border-gray-300 rounded shadow cursor-not-allowed" href=" #"><i class="fa-solid fa-eraser text-gray-400"></i></a>
                                             </div>
                                         </td>
                                     </tr>

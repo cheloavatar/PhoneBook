@@ -19,7 +19,7 @@
                     <b>
                         <span class="text-stone-500">{{$detenidos->total()}}</span> REGISTRO.
                     </b>
-                    <button type="button" onclick="window.location='{{ route('agenda.create') }}'" class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2">
+                    <button type="button" onclick="window.location='{{ route('agenda.create') }}'" class="text-stone-600 bg-stone hover:bg-stone-300 border border-stone-400 focus:ring-4 focus:outline-none focus:ring-stone-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-stone-600 dark:bg-stone-800 dark:border-stone-700 dark:text-white dark:hover:bg-stone-700 mr-2 mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z" />
                         </svg> <span class="px-2"> AGREGAR PERSONA </span>
@@ -72,8 +72,8 @@
                                 </td>
                                 <td class="border border-stone-400 p-2 whitespace-nowrap">
                                     <div class="text-lg text-center">
-                                        <a class="bg-white hover:bg-stone-100 text-stone-800 font-semibold py-2 px-4 mr-4 border border-stone-400 rounded shadow" href=" {{ route('agenda.show',$detenido->id) }}"><i class="far fa-eye"></i></a>
-                                        <a class="bg-white hover:bg-stone-100 text-stone-800 font-semibold py-2 px-4 mr-4 border border-stone-400 rounded shadow" href=" {{ route('agenda.edit',$detenido->id) }}"><i class="fas fa-edit"></i></a>
+                                        <a class="bg-stone hover:bg-stone-300 text-stone-600 font-semibold py-2 px-3 mr-2 border border-stone-400 rounded shadow" href=" {{ route('agenda.show',$detenido->id) }}"><i class="far fa-eye text-stone-600"></i></a>
+                                        <a class="bg-stone hover:bg-stone-300 text-stone-600 font-semibold py-2 px-3 mr-2 border border-stone-400 rounded shadow" href=" {{ route('agenda.edit',$detenido->id) }}"><i class="fas fa-edit text-stone-600"></i></a>
                                     </div>
                                 </td>
                             </tr>

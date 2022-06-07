@@ -74,8 +74,8 @@
                                 </td>
                                 <td class=" border border-stone-400 p-1 whitespace-nowrap">
                                     <div class="text-lg text-center py-1">
-                                        <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 mr-2 border border-gray-400 rounded shadow" href=" #"><i class="far fa-edit text-stone-700"></i></a>
-                                        <a class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 mr-2 border border-gray-400 rounded shadow" disabled href=" #"><i class="fa-solid fa-eraser text-stone-700"></i></a>
+                                        <a class="bg-gray-200 hover:bg-gray-200 text-gray-100 font-semibold py-1 px-2 mr-2 border border-gray-300 rounded shadow cursor-not-allowed" href=" #"><i class="far fa-edit text-gray-400"></i></a>
+                                        <a class="bg-gray-200 hover:bg-gray-200 text-gray-100 font-semibold py-1 px-2 mr-2 border border-gray-300 rounded shadow cursor-not-allowed" href=" #"><i class="fa-solid fa-eraser text-gray-400"></i></a>
                                     </div>
                                 </td>
                             </tr>
