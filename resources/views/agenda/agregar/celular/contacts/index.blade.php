@@ -42,24 +42,24 @@
                         <tbody class="text-sm  divide-stone-100">
                             @foreach($contacts as $contact)
                             <tr class="hover:bg-stone-100 ">
-                                <td class="border border-stone-400 p-1 whitespace-nowrap text-center">
+                                <td class="border border-stone-400 p-1 whitespace-nowrap text-stone-500 text-center">
                                     {{$contact->id}}
                                 </td>
                                 <td class=" border border-stone-400 p-1 whitespace-nowrap text-left">
-                                    <div class="font-medium text-gray-800">{{$contact->nombre}}</div>
+                                    <div class="font-medium text-stone-500">{{$contact->nombre}}</div>
                                 </td>
                                 <td class="border border-stone-400 p-1 whitespace-nowrap text-center">
-                                    <div class="font-medium text-gray-800">{{$contact->telefono}}</div>
+                                    <div class="font-medium text-stone-500">{{$contact->telefono}}</div>
                                 </td>
                                 <td class="border border-stone-400 p-1 whitespace-nowrap text-center">
-                                    <div class="font-medium text-gray-800"><span class="dark:text-gray-400 text-gray-400">EQUIPO: </span>{{$contact->celulars->marca}} {{$contact->celulars->modelo}},
-                                        <span class="dark:text-gray-400 text-gray-400"> IMEI:</span> {{$contact->celulars->imei}}
-                                        <span class="dark:text-gray-400 text-gray-400"> TEL: </span>{{$contact->celulars->telefono}}
+                                    <div class="font-medium text-gray-800"><span class="dark:text-gray-400 text-stone-400">EQUIPO: </span><span class="text-stone-500">{{$contact->celulars->marca}} {{$contact->celulars->modelo}}</span>
+                                        <span class="dark:text-gray-400 text-stone-400"> IMEI:</span> <span class="text-stone-500">{{$contact->celulars->imei}}</span>
+                                        <span class="dark:text-gray-400 text-stone-400"> TEL: </span><span class="text-stone-500">{{$contact->celulars->telefono}}</span>
                                     </div>
                                 </td>
-                                <td class="border border-stone-300 p-1 flex justify-center">
+                                <td class="border border-stone-400">
                                     <a href="{{ route('agenda.show',$contact->detenido_id) }}">
-                                    <img data-tooltip-target="tooltip-light" data-tooltip-style="light" src="
+                                    <img data-tooltip-target="tooltip-light" data-tooltip-style="light" class="mx-auto" src="
                                             @if($contact->detenidos->fotodetenido !=null)
                                                 {{asset($contact->detenidos->fotodetenido->url).'/t_foto.jpeg'}}
                                             @else

@@ -53,6 +53,28 @@ class DetenidoController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'nombre' => 'required',
+
+            'origen' => 'required',
+            'd_calle' => 'required',
+            'd_numero' => 'required',
+            'd_colonia' => 'required',
+            'd_cp' => 'required',
+            'd_estado' => 'required',
+            'fecha_nacimiento' => 'required'
+        ], [
+            'nombre.required' => 'El campo Nombre es obligatorio.',
+
+            'slug.unique' => 'Nombre de usuario ya registrado.',
+            'origen.required' => 'El campo Lugar de Origen es obligatorio.',
+            'd_calle.required' => 'El campo Calle es obligatorio.',
+            'd_numero.required' => 'El campo Numero es obligatorio.',
+            'd_colonia.required' => 'El campo Colonia es obligatorio.',
+            'd_cp.required' => 'El campo CP es obligatorio.',
+            'd_estado.required' => 'El campo Estado es obligatorio.',
+            'fecha_nacimiento.required' => 'El campo Fecha de Nacimiento es obligatorio.'
+        ]);
         //Imagen de perfil
         if($request->hasFile('foto')){
 

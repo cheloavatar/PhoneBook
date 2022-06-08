@@ -35,57 +35,100 @@
                         <div class="flex flex-col">
                             <input type="text" name="elemento_creo" id="elemento_creo" class="form-control" hidden value="{{Auth::user()->id}}" >
                             <input type="text" name="elemento_edito" id="elemento_edito" class="form-control" hidden value="{{Auth::user()->id}}" >
-                          <label class="leading-loose text-stone-500" >Nombre</label>
-                          <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" required placeholder="Nombre completo" name="nombre" id="nombre" />
+                          <label class="leading-loose text-stone-500" for="nombre" >Nombre</label>
+                          <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500text-stone-400"  placeholder="Nombre completo" name="nombre" id="nombre" />
+                        @error('nombre')
+                            <span style="color:red;" class="px-4 py-2 text-sm"><i class="fa-solid fa-xmark"></i> {{ $message }}</span>
+                        @enderror
                         </div>
                         <div class="flex items-center  content space-x-4">
                           <div class="flex flex-col flex-1">
                               <label class="leading-loose text-stone-500">Alias</label>
                               <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="Opcional" name="alias" id="alias" />
-                          </div>
+                            </div>
                           <div class="flex flex-col flex-1">
                               <label class="leading-loose text-stone-500">Lugar de Origen</label>
-                              <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" required placeholder="" name="origen" id="origen" />
+                              <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="" name="origen" id="origen" />
                           </div>
                           <div class="flex flex-col flex-1">
                             <label class="leading-loose text-stone-500">Fecha de Nacimiento</label>
                             <div class="relative focus-within:text-gray-600 text-gray-400">
-                                <x-jet-input type="date" required class="pl-10 w-full " placeholder="26/02/2020" name="fecha_nacimiento" id="fecha_nacimiento" />
+                                <x-jet-input type="date" class="pl-10 w-full " placeholder="26/02/2020" name="fecha_nacimiento" id="fecha_nacimiento" />
                               <div class="absolute left-3 top-2">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                               </div>
                             </div>
                           </div>
                         </div>
+                        <!-- VALIDATION-->
+                        <div class="flex items-center  content space-x-4 ">
+                            <div class="flex flex-col flex-1 ">
+                            </div>
+                            <div class="flex flex-col flex-1">
+                            @error('origen')
+                                <span style="color:red;" class="px-4 py-2 text-sm"><i class="fa-solid fa-xmark"></i> {{ $message }}</span>
+                            @enderror
+                            </div>
+                            <div class="flex flex-col flex-1">
+                                @error('fecha_nacimiento')
+                                    <span style="color:red;" class="px-4 py-2 text-sm"><i class="fa-solid fa-xmark"></i> {{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+                        <!-- END VALIDATION-->
                       </div>
                       <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                           <p class="text-sm text-stone-400 font-normal leading-relaxed">Domicilio</p>
                           <div class="flex items-center  content space-x-4">
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose text-stone-500">Calle</label>
-                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" required placeholder="" name="d_calle" id="d_calle"/>
+                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="" name="d_calle" id="d_calle"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose text-stone-500">Numero</label>
-                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" required placeholder="Solo números" name="d_numero" id="d_numero"/>
+                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="Solo números" name="d_numero" id="d_numero"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose text-stone-500">Colonia</label>
-                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" required placeholder="" name="d_colonia" id="d_colonia"/>
+                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="" name="d_colonia" id="d_colonia"/>
                               </div>
                               <div class="flex flex-col flex-1/2">
                                   <label class="leading-loose text-stone-500">Codigo Postal</label>
-                                  <x-jet-input type="number" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" required placeholder="Solo números" name="d_cp" id="d_cp"/>
+                                  <x-jet-input type="number" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="Solo números" name="d_cp" id="d_cp"/>
                               </div>
                           </div>
+                        <!-- VALIDATION-->
+                        <div class="flex items-center  content space-x-4">
+                            <div class="flex flex-col flex-1">
+                                @error('d_calle')
+                                    <span style="color:red;" class="px-4 py-2 text-sm"><i class="fa-solid fa-xmark"></i> {{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="flex flex-col flex-1">
+                                @error('d_numero')
+                                    <span style="color:red;" class="px-4 py-2 text-sm"><i class="fa-solid fa-xmark"></i> {{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="flex flex-col flex-1">
+                            @error('d_colonia')
+                                <span style="color:red;" class="px-4 py-2 text-sm"><i class="fa-solid fa-xmark"></i> {{ $message }}</span>
+                            @enderror
+                            </div>
+                            <div class="flex flex-col flex-1">
+                                @error('d_cp')
+                                    <span style="color:red;" class="px-4 py-2 text-sm"><i class="fa-solid fa-xmark"></i> {{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+                        <!-- END VALIDATION-->
                           <div class="flex items-center  content space-x-4">
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose text-stone-500">Estado</label>
-                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" required placeholder="" name="d_estado" id="d_estado"/>
+                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400"  placeholder="" name="d_estado" id="d_estado"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose text-stone-500">Municipio</label>
-                                  <select required name="municipio_id" id="municipio_id" class="focus-within:text-stone-500 text-stone-400 border-stone-300 focus:border-stone-300 focus:ring focus:ring-stone-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                                  <select name="municipio_id" id="municipio_id" class="focus-within:text-stone-500 text-stone-400 border-stone-300 focus:border-stone-300 focus:ring focus:ring-stone-200 focus:ring-opacity-50 rounded-md shadow-sm">
                                     @foreach($municipios as $municipio)
                                     @if ($loop->first)
                                         <option value="{{ $municipio->id }}" selected="selected">{{ $municipio->nombre }}</option>
@@ -96,6 +139,15 @@
                                   </select>
                               </div>
                           </div>
+                        <!-- VALIDATION-->
+                        <div class="flex items-center  content space-x-1">
+                            <div class="flex flex-col flex-1">
+                                @error('d_estado')
+                                    <span style="color:red;" class="px-4 py-2 text-sm"><i class="fa-solid fa-xmark"></i> {{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+                        <!-- END VALIDATION-->
                       </div>
                       <div class="pt-4 flex items-center space-x-4">
                           <a class="flex justify-center items-center w-full text-stone-600 px-4 py-3 rounded-md focus:outline-none" href="{{ route('cancelar','/') }}">

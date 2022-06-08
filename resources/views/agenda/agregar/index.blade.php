@@ -60,18 +60,18 @@
                                                 {{asset("/assets/img").'/t_foto.jpeg'}}
                                                 @endif"
                                                 width="40" height="40" alt="{{$detenido->nombre}}"></div>
-                                                <div class="text-left font-medium text-stone-600">{{$detenido->nombre}}</div>
+                                                <div class="text-left font-medium text-stone-500">{{$detenido->nombre}}</div>
                                             </a>
                                     </div>
                                 </td>
                                 <td class="border border-stone-400 p-2 whitespace-nowrap text-center">
-                                    <div class="font-medium text-gray-800">{{$detenido->alias}}</div>
+                                    <div class="font-medium text-stone-500">{{$detenido->alias}}</div>
                                 </td>
                                 <td class="border border-stone-400 p-2 whitespace-nowrap text-center">
-                                    <div class="font-medium text-gray-800">{{\Carbon\Carbon::parse($detenido->fecha_nacimiento)->diff(now())->format("%y años")}}</div>
+                                    <div class="font-medium text-stone-500">{{\Carbon\Carbon::parse($detenido->fecha_nacimiento)->diff(now())->format("%y años")}}</div>
                                 </td>
                                 <td class="border border-stone-400 p-2 whitespace-nowrap text-center">
-                                    <div class="font-medium text-gray-800">{{$detenido->origen}}</div>
+                                    <div class="font-medium text-stone-500">{{$detenido->origen}}</div>
                                 </td>
                                 <td class="border border-stone-400 p-2 whitespace-nowrap">
                                     <div class="text-lg text-center">
