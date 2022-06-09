@@ -36,7 +36,7 @@
                             <input type="text" name="elemento_creo" id="elemento_creo" class="form-control" hidden value="{{Auth::user()->id}}" >
                             <input type="text" name="elemento_edito" id="elemento_edito" class="form-control" hidden value="{{Auth::user()->id}}" >
                           <label class="leading-loose text-stone-500" for="nombre" >Nombre</label>
-                          <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500text-stone-400"  placeholder="Nombre completo" name="nombre" id="nombre" />
+                          <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500text-stone-400"  value="{{old('nombre')}}" placeholder="Nombre completo" name="nombre" id="nombre" />
                         @error('nombre')
                             <span style="color:red;" class="px-4 py-2 text-sm"><i class="fa-solid fa-xmark"></i> {{ $message }}</span>
                         @enderror
@@ -44,16 +44,16 @@
                         <div class="flex items-center  content space-x-4">
                           <div class="flex flex-col flex-1">
                               <label class="leading-loose text-stone-500">Alias</label>
-                              <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="Opcional" name="alias" id="alias" />
+                              <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="Opcional" name="alias" id="alias" value="{{old('alias')}}" />
                             </div>
                           <div class="flex flex-col flex-1">
                               <label class="leading-loose text-stone-500">Lugar de Origen</label>
-                              <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="" name="origen" id="origen" />
+                              <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="" name="origen" id="origen" value="{{old('origen')}}"/>
                           </div>
                           <div class="flex flex-col flex-1">
                             <label class="leading-loose text-stone-500">Fecha de Nacimiento</label>
                             <div class="relative focus-within:text-gray-600 text-gray-400">
-                                <x-jet-input type="date" class="pl-10 w-full " placeholder="26/02/2020" name="fecha_nacimiento" id="fecha_nacimiento" />
+                                <x-jet-input type="date" class="pl-10 w-full " placeholder="26/02/2020" name="fecha_nacimiento" id="fecha_nacimiento" value="{{old('fecha_nacimiento')}}"/>
                               <div class="absolute left-3 top-2">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                               </div>
@@ -82,19 +82,19 @@
                           <div class="flex items-center  content space-x-4">
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose text-stone-500">Calle</label>
-                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="" name="d_calle" id="d_calle"/>
+                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="" name="d_calle" id="d_calle" value="{{old('d_calle')}}"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose text-stone-500">Numero</label>
-                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="Solo números" name="d_numero" id="d_numero"/>
+                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="Solo números" name="d_numero" id="d_numero" value="{{old('d_numero')}}"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose text-stone-500">Colonia</label>
-                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="" name="d_colonia" id="d_colonia"/>
+                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="" name="d_colonia" id="d_colonia" value="{{old('d_colonia')}}"/>
                               </div>
                               <div class="flex flex-col flex-1/2">
                                   <label class="leading-loose text-stone-500">Codigo Postal</label>
-                                  <x-jet-input type="number" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="Solo números" name="d_cp" id="d_cp"/>
+                                  <x-jet-input type="number" class="px-4 py-2 focus-within:text-stone-500 text-stone-400" placeholder="Solo números" name="d_cp" id="d_cp" value="{{old('d_cp')}}"/>
                               </div>
                           </div>
                         <!-- VALIDATION-->
@@ -124,16 +124,16 @@
                           <div class="flex items-center  content space-x-4">
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose text-stone-500">Estado</label>
-                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400"  placeholder="" name="d_estado" id="d_estado"/>
+                                  <x-jet-input type="text" class="px-4 py-2 focus-within:text-stone-500 text-stone-400"  placeholder="" name="d_estado" id="d_estado"  value="{{old('d_estado')}}"/>
                               </div>
                               <div class="flex flex-col flex-1">
                                   <label class="leading-loose text-stone-500">Municipio</label>
                                   <select name="municipio_id" id="municipio_id" class="focus-within:text-stone-500 text-stone-400 border-stone-300 focus:border-stone-300 focus:ring focus:ring-stone-200 focus:ring-opacity-50 rounded-md shadow-sm">
                                     @foreach($municipios as $municipio)
                                     @if ($loop->first)
-                                        <option value="{{ $municipio->id }}" selected="selected">{{ $municipio->nombre }}</option>
+                                        <option value="{{ $municipio->id }}" >{{ $municipio->nombre }}</option>
                                     @else
-                                        <option value="{{ $municipio->id }}">{{ $municipio->nombre }}</option>
+                                        <option value="{{$municipio->id}}"@if( $municipio->id==old('municipio_id'))selected="selected"@endif>{{ $municipio->nombre }}</option>
                                     @endif
                                     @endforeach
                                   </select>
