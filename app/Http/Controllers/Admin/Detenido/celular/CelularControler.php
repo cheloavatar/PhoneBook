@@ -140,7 +140,7 @@ class CelularControler extends Controller
     public function createcelular(Request $request, $id)
     {
         if($request->hasFile('fileInput')){
-        $slug = Str::slug($request->marca.'-'.$request->modelo);
+        $slug = Str::slug($request->marca.'-'.$request->modelo."-".date("Y-m-d H:i:s"));
         $imagen= $request->File('fileInput');
         $extension = $imagen->getClientOriginalExtension();
         $size = $imagen->getSize();

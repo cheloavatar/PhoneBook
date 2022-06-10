@@ -91,8 +91,7 @@
                     </div>
                     <div class="flex-none w-32">
                     </div>
-                  </div>
-
+                </div>
             </div>
         </div>
     </div>

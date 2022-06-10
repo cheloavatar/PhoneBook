@@ -107,7 +107,7 @@
         <!-- header -->
         <div class="px-4 py-3 border-b border-gray-200">
             <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
-                <h2 class="leading-relaxed">Agregar un contacto</h2>
+                <h2 class="leading-relaxed text-stone-600">Agregar un contacto</h2>
             </div>
         </div>
         <form action="{{ route('contacto.store')}}" method="POST" enctype="multipart/form-data" >
@@ -118,21 +118,35 @@
                     <div class="flex flex-col flex-1">
                         <input type="text" name="detenido_id" id="detenido_id" class="form-control" hidden value="{{$celular->detenido_id}}" >
                         <input type="text" name="celular_id" id="celular_id" class="form-control"  hidden value="{{$celular->id}}" >
-                        <label class="leading-loose">Nombre</label>
-                        <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="nombre" id="nombre" >
+                        <label class="leading-loose text-stone-500">Nombre</label>
+                        <x-jet-input type="text" required  class="px-4 py-2 border focus:within-stone-500 focus:outline-none text-stone-600" placeholder="Nombre del contacto" name="nombre" id="nombre" />
                     </div>
                     <div class="flex flex-col flex-1">
-                        <label class="leading-loose">Telefono</label>
-                        <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Opcional" name="telefono" id="telefono" >
+                        <label class="leading-loose text-stone-500">Telefono</label>
+                        <x-jet-input type="text" required class="px-4 py-2 border focus:within-stone-500 text-stone-600" placeholder="Teléfono sin guion" name="telefono" id="telefono" />
                     </div>
                 </div>
+                <!-- VALIDATION-->
+                <div class="flex items-center  content space-x-4">
+                    <div class="flex flex-col flex-1">
+                        @error('nombre')
+                            <span style="color:red;" class="px-4 py-2 text-sm"><i class="fa-solid fa-xmark"></i> {{ $message }}</span>
+                        @enderror
+                    </div>
+                    <div class="flex flex-col flex-1">
+                        @error('telefono')
+                            <span style="color:red;" class="px-4 py-2 text-sm"><i class="fa-solid fa-xmark"></i> {{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
+                <!-- END VALIDATION-->
             </div>
             <!-- footer -->
-            <div class="absolute bottom-0 left-0 px-4 py-3 border-t border-gray-200 w-full flex justify-end items-center gap-3">
-                    <button type="button" class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none" onclick="openModal(false)">
+            <div class="absolute bottom-0 left-0 px-4 py-3 border-t border-stone-200 w-full flex justify-end items-center gap-3">
+                    <button type="button" class="flex justify-center items-center w-full text-stone-600 px-4 py-3 rounded-md focus:outline-none" onclick="openModal(false)">
                     <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Cancel
                     </button>
-                    <button class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none" type="submit">Agregar</button>
+                    <button class="bg-stone-600 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none" type="submit">Agregar</button>
             </div>
         </form>
     </div>

@@ -46,6 +46,13 @@ class ContactosController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'nombre' => 'required',
+            'fecha_nacimiento' => 'required'
+        ], [
+            'nombre.required' => 'El campo nombre es obligatorio.',
+            'telefono.required' => 'El campo teléfono es obligatorio.'
+        ]);
         $contacto = new Contact;
         $contacto->nombre = $request->nombre;
         $contacto->telefono = $request->telefono;

@@ -54,8 +54,7 @@ class DetenidoController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'nombre' => 'required',
-
+            'nombre' => 'required|unique:detenidos',
             'origen' => 'required',
             'd_calle' => 'required',
             'd_numero' => 'required',
@@ -65,8 +64,7 @@ class DetenidoController extends Controller
             'fecha_nacimiento' => 'required'
         ], [
             'nombre.required' => 'El campo Nombre es obligatorio.',
-
-            'slug.unique' => 'Nombre de usuario ya registrado.',
+            'nombre.unique' => 'La persona ya se encuentra registrada, ingresa a el listado de personas.',
             'origen.required' => 'El campo Lugar de Origen es obligatorio.',
             'd_calle.required' => 'El campo Calle es obligatorio.',
             'd_numero.required' => 'El campo Numero es obligatorio.',
