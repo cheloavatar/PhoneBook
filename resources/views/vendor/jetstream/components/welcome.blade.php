@@ -5,7 +5,7 @@
     <div class="flex flex-row">
         <div class="basis-4/5 text-stone-500 my-8 aling-middle text-justify text-lg">
             <span class="text-justify">Aplicación capaz de registrar personas y a esas personas registrar equipos celulares y a esos equipos celulares registrarle agendas telefónicas. Útil para la relación de contactos entre personas y equipos celulares.
-La aplicación permite almacenar contactos manual mente o a partir de una lista de contactos en formato CVS, XSL y xlsx (siempre y cuando respete la nomenclatura: en la primera fila del Excel nombre y la segunda teléfono)
+La aplicación permite almacenar contactos manual mente o a partir de una lista de contactos en formato .CSV, .XLS y .XLSX (siempre y cuando respete la nomenclatura: en la primera fila del Excel nombre y la segunda teléfono)
 .</span>
         </div>
         <div class="basis-1/5 flex justify-center">
