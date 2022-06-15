@@ -12,7 +12,7 @@ Can use files .CSV, .XLS and .XLSX while you respect the nomenclature of the dat
 
 ## Installation 
 
-*Once the repository is cloned, we will open a terminal and place ourselves in that folder. Once there we will execute: **composer install**
+* Once the repository is cloned, we will open a terminal and place ourselves in that folder. Once there we will execute: **composer install**
 * By default, and for security reasons, the .env file is not taken into account in the project so we have to generate one ourselves. We can do it from the terminal (if we are on Windows) by typing: **copy NUL .env**
 * Once created, we will proceed to edit it. But to save time, we'll also open the .env.example file that contains an example of the variables and copy them over.
 * Generate a key. Laravel needs a unique key for our projects. We will generate it using the command: **php artisan key:generate**
