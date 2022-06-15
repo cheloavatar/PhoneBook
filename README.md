@@ -1,4 +1,4 @@
-<p align="center"><a href="#" target="_blank"><img src="https://raw.githubusercontent.com/cheloavatar/PhoneBook/b40cb9ed9170e0564caf45cb8660ca9b305f3a02/public/assets/img/logo-text.png" width="400"></a></p>
+<p align="center"><a href="#" target="_blank"><img src="https://raw.githubusercontent.com/cheloavatar/PhoneBook/main/public/assets/img/logo-text.svg" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
