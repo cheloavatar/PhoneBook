@@ -7,7 +7,7 @@
 
 ## About PhoneBook
 
-PhoneBook is a web application maked with laravel framework. With PhoneBook you can add phone books of person and relation the telephone number with other person.
+PhoneBook is a web application made with laravel framework. With PhoneBook you can add phone books of person and relation the telephone number with other person.
 Can use files .CSV, .XLS and .XLSX while you respect the nomenclature of the database.
 
 ## Installation 
